@@ -54,7 +54,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
         MO(3), KC_EXLM,   KC_AT, KC_HASH,  KC_DLR, KC_PERC,                      KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_DEL,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-        _______, KC_END, KC_HOME, KC_PGDN , XXXXXXX,    KC_MEDIA_PLAY_PAUSE,                      KC_LEFT, KC_DOWN,   KC_UP,KC_RIGHT,  KC_F11,  KC_F12,
+      _______, KC_END, KC_HOME, KC_PGDN , XXXXXXX,    KC_MEDIA_PLAY_PAUSE,                      KC_LEFT, KC_DOWN,   KC_UP,KC_RIGHT,  KC_F11,  KC_GRV,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      KC_MINUS, KC_EQL, KC_LCBR, KC_RCBR, KC_PIPE, KC_TILD,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
