@@ -44,7 +44,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+-----------------------|                    |--------+--------+--------+--------+--------+--------|
         MO(3), KC_END, KC_HOME, KC_PGDN , XXXXXXX,    KC_MEDIA_PLAY_PAUSE,                      KC_LEFT, KC_DOWN,   KC_UP,KC_RIGHT,  KC_F11,  KC_F12,
   //|--------+--------+--------+--------+--------+-----------------------|                    |--------+--------+--------+--------+--------+--------|
-      _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX,                                  KC_MINUS, KC_EQL, KC_LCBR, KC_RCBR, KC_PIPE, KC_TILD,
+      _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX,                                  KC_MINUS, KC_EQL, KC_LBRC, KC_RBRC, KC_PIPE, KC_TILD,
   //|--------+--------+--------+--------+--------+--------+-----------------------|  |--------+--------+--------+--------+--------+--------+--------|
                                                          _______, _______,  _______,     _______,   MO(3), _______
                                                      //`--------------------------'  `--------------------------'
@@ -56,7 +56,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       _______, KC_END, KC_HOME, KC_PGDN , XXXXXXX,    KC_MEDIA_PLAY_PAUSE,                      KC_LEFT, KC_DOWN,   KC_UP,KC_RIGHT,  KC_F11,  KC_GRV,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      KC_MINUS, KC_EQL, KC_LCBR, KC_RCBR, KC_PIPE, KC_TILD,
+      _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      KC_MINUS, KC_EQL, KC_LBRC, KC_RBRC, KC_PIPE, KC_TILD,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           _______,   MO(3),  _______,     LT(3, KC_ENT), _______, KC_RALT
                                       //`--------------------------'  `--------------------------'
