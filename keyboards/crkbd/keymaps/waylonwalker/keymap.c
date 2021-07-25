@@ -41,15 +41,6 @@ enum custom_keycodes {
     VIM___P,
     VIM___W,
     VIM___Y,
-    SUPERF1,
-    SUPERF2,
-    SUPERF3,
-    SUPERF4,
-    SUPERF5,
-    SUPERF6,
-    SUPERF7,
-    SUPERF8,
-    SUPERF9,
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
