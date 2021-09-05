@@ -104,16 +104,17 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------------------------.                    ,-----------------------------------------------------------------.
-      LT(2, KC_TAB),             KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                         KC_Y,    KC_U,    KC_I,    KC_O,   KC_P,  KC_BSPC,
+      LT(2, KC_TAB),             KC_Q,    KC_W,    LT(3, KC_E),    KC_R,    KC_T,                         KC_Y,    KC_U,    KC_I,    KC_O,   KC_P,  KC_BSPC,
   //|--------------------------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------------------|
       LT(7, KC_ESC),             LT(4, KC_A),    LT(5, KC_S),    LSFT_T(KC_D),    LCTL_T(KC_F),    KC_G,                         KC_H,    RCTL_T(KC_J),    RSFT_T(KC_K),    LT(5, KC_L), LT(4, KC_SCLN), LT(7, KC_QUOT),
   //|--------------------------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------------------|
       KC_LSFT,                   LGUI_T(KC_Z),    LALT_T(KC_X),    LT(11, KC_C),  LT(9, KC_V),    LT(10, KC_B),                         KC_N,    RCTL_T(KC_M), RSFT_T(KC_COMM),  RALT_T(KC_DOT), RGUI_T(KC_SLSH),  KC_HYPR,
-  //|--------------------------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------------------|
-                                                   KC_LGUI,   KC_LALT,  KC_LCTL,         LT(4, KC_ENT),   LT(2, KC_SPC), KC_RSFT
+  //|--------------------------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------------------| 
+                                                      KC_LGUI,   KC_LALT,  KC_LCTL,         LT(4, KC_ENT),   LT(2, KC_SPC), KC_RSFT
                                                //`-----------------------------------'  `---------------------------------------'
   ),
 
+  // default layer 1 unused
   [1] = LAYOUT_split_3x6_3(
   //,--------------------------------------------------------------------.                    ,-----------------------------------------------------.
         MO(3), KC_EXLM,   KC_AT, KC_HASH,  KC_DLR, KC_PERC,                      KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_DEL,
@@ -126,6 +127,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                      //`--------------------------'  `--------------------------'
   ),
 
+  // used only for symbols, needs merged with layer 3
   [2] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
         MO(3), KC_EXLM,   KC_AT, KC_HASH,  KC_DLR, KC_PERC,                      KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_DEL,
@@ -138,11 +140,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                       //`--------------------------'  `--------------------------'
   ),
 
+  // rgb - mouse  
   [3] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
         RESET, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_WH_U,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      RGB_TOG, RGB_HUI, RGB_SAI, RGB_VAI, XXXXXXX, LCTL_T( KC_WH_D ),                      KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R, XXXXXXX, KC_PSCR,
+      RGB_TOG, RGB_HUI, RGB_SAI, RGB_VAI, XXXXXXX, KC_WH_D,                      KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R, XXXXXXX, KC_PSCR,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       RGB_MOD, RGB_HUD, RGB_SAD, RGB_VAD, KC_VOLD, KC_VOLU,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
@@ -151,6 +154,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
 
+  // paren - numppad
   [4] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
       _______, XXXXXXX, XXXXXXX, KC_LBRC, KC_RBRC, KC_PERC,                     KC_PLUS, KC_7, KC_8, KC_9, KC_PAST, KC_BSPC,
@@ -164,6 +168,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   
    
+  // parens, usused for 4
   [5] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
       _______, TT(6),   XXXXXXX, KC_LBRC, KC_RBRC, XXXXXXX,                      XXXXXXX, KC_LBRC, KC_RBRC, XXXXXXX, XXXXXXX, KC_BSPC,
@@ -175,6 +180,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                           _______, _______,  _______,     _______, _______, _______
                                       //`--------------------------'  `--------------------------'
   ),
+
+  // left space for minecraft
   [6] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------------------------.                    ,-------------------------------------------------------.
       LT(1, KC_TAB),             XXXXXXX,    KC_W,    KC_E,    KC_1, KC_T,                        KC_Q,    KC_U,    KC_I,    KC_O,   KC_P,  KC_BSPC,
@@ -187,6 +194,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                //`-----------------------------------'  `---------------------------------------'
   ),
 
+  // vimmy navigation
   [7] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
       _______, MO(4), VIM___W, VIM___E, KC_VOLD, KC_VOLU,                    VIM___Y, KC_PGUP,  KC_HOME, VIM___O, VIM___P, KC_DEL,
@@ -198,6 +206,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                           _______, MO(8),  _______,     _______,   MO(3), _______
                                       //`--------------------------'  `--------------------------'
   ),
+  // unused
   [8] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
       _______, XXXXXXX, XXXXXXX, KC_LBRC, KC_RBRC, KC_MS_WH_UP,                 KC_PLUS, KC_7, KC_8, KC_9, KC_PAST, KC_BSPC,
@@ -209,6 +218,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                           _______, TT(6),  _______,     _______, _______, _______
                                       //`--------------------------'  `--------------------------'
   ),
+  // awesome wm go to tag numpad
   [9] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
       _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, LCTL(LGUI(KC_7)), LCTL(LGUI(KC_8)), LCTL(LGUI(KC_9)), XXXXXXX, XXXXXXX,
@@ -221,6 +231,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                       //`--------------------------'  `--------------------------'
 
   ),
+  // awesome wm join tag numpad
   [10] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
       _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, LSFT(LGUI(KC_7)), LSFT(LGUI(KC_8)), LSFT(LGUI(KC_9)), XXXXXXX, XXXXXXX,
@@ -233,6 +244,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                       //`--------------------------'  `--------------------------'
 
   ),
+  // awesome wm send to tag numpad
   [11] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
       _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, LGUI(KC_7), LGUI(KC_8), LGUI(KC_9), XXXXXXX, XXXXXXX,
